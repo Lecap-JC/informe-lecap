@@ -110,7 +110,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document
     </div>
     <ul class="datos">
       <li><a href="tel:+5492995906398"><span>Tel</span><em class="largo">+54 9 299 590 6398</em><em class="corto">Llamanos</em></a></li>
-      <li><a href="mailto:consultoria@lecap.pro"><span>Mail</span><em class="largo">consultoria@lecap.pro</em><em class="corto">Escribinos</em></a></li>
+      <li><a href="mailto:fcorrea@lecap.pro"><span>Mail</span><em class="largo">fcorrea@lecap.pro</em><em class="corto">Escribinos</em></a></li>
     </ul>
   </aside>
   <form class="form" id="form" novalidate>
@@ -140,8 +140,8 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document
       <div class="campo">
         <label>Cómo lo querés recibir</label>
         <div class="opciones">
-          <input type="radio" id="canal-wa" name="canal_informe" value="WhatsApp"><label for="canal-wa">Por WhatsApp</label>
-          <input type="radio" id="canal-mail" name="canal_informe" value="Mail"><label for="canal-mail">Por mail</label>
+          <input type="radio" id="canal-wa" name="canal_del_informe" value="WhatsApp"><label for="canal-wa">Por WhatsApp</label>
+          <input type="radio" id="canal-mail" name="canal_del_informe" value="Mail"><label for="canal-mail">Por mail</label>
         </div>
       </div>
     </div>
@@ -156,14 +156,14 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document
     <a class="g-wa" href="https://wa.me/5492995906398">Escribirnos por WhatsApp</a>
   </div>
 </div>
-<script>var GRUPOS = [{name:'canal_informe',msg:'Elegí cómo lo querés recibir'}];
+<script>var GRUPOS = [{name:'canal_del_informe',msg:'Elegí cómo lo querés recibir'}];
 /* ---------------------------------------------------------------
    CONFIGURACIÓN — completar el GUID después de crear el formulario
    en HubSpot (Marketing > Formularios). El resto ya está verificado.
    --------------------------------------------------------------- */
 var CONFIG = {
   portalId: '51427098',
-  formGuid: 'COMPLETAR-GUID-INFORME',
+  formGuid: '76d02c70-4f9d-475a-b365-9151a5095f1e',
   pixelId:  '1478928590046872'
 };
 
@@ -291,7 +291,7 @@ form.addEventListener('submit', function(e){
     boton.disabled = false;
     boton.textContent = etiqueta;
     var p = form.querySelector('.pie');
-    p.textContent = 'No pudimos registrar tus datos. Escribinos a consultoria@lecap.pro o por WhatsApp al +54 9 299 590 6398.';
+    p.textContent = 'No pudimos registrar tus datos. Escribinos a fcorrea@lecap.pro o por WhatsApp al +54 9 299 590 6398.';
     p.style.color = '#B3261E';
   });
 });
