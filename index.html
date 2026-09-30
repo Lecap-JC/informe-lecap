@@ -129,7 +129,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document
       </div>
       <div class="fila">
         <div class="campo">
-          <label for="email">Correo electrónico</label>
+          <label for="email">Correo de la empresa</label>
           <input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
         </div>
         <div class="campo">
@@ -225,6 +225,9 @@ function validar(){
     var campo = el.closest('.campo'), v = el.value.trim();
     if (!v) {
       marcarError(campo, 'Este dato es necesario');
+      ok = false; primero = primero || campo;
+    } else if (el.type === 'email' && /@(gmail|googlemail|hotmail|outlook|live|msn|yahoo|ymail|icloud|me|mac|aol|proton|protonmail|gmx|yandex|mail|zoho|fibertel|speedy|arnet|ciudad)\.[a-z.]+$/i.test(v)) {
+      marcarError(campo, 'Usá el correo de tu empresa. Si no tenés uno, escribinos por WhatsApp al +54 9 299 590 6398 y lo vemos en una reunión.');
       ok = false; primero = primero || campo;
     } else if (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
       marcarError(campo, 'Revisá el correo');
